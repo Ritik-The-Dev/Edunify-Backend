@@ -51,7 +51,7 @@ exports.DeleteSchool = async (req, res) => {
   }
   exports.GetSchool = async (req, res) => {
     try {
-        const data = await SchoolSchema.find({}).sort({ loginAt: -1 });
+        const data = await SchoolSchema.find({}).sort({ createdAt: -1 });
         return res.status(200).json({
             success:'true',
             data:data,
